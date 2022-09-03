@@ -1,20 +1,26 @@
 {% extends 'layouts/app_layout.html' %}
 
 {% block content %}
-    <body>
+    <link rel="stylesheet" href="{% static 'css/lobby.css' %}">
+    
+    <div class="chat-container">
+        
         <a href="{% url 'logout' %}">DESCONECTAR</a>
-
-        <h2>Lets chat!</h2>
+    
+        <div class="chat-header">
+            <label for="user">USUARIO:</label>
+            <label id="username">{{ user.get_username }}</label>
+        </div>
         
         <form id="form">
-            <input type="text" name="message"/>
+            <input type="text" placeholder="Mensaje" name="message"/>
         </form>
         
         <div id="messages"></div>
         
 
-        
-    </body>
+    </div>
+
     
     <script src="{% static 'js/socketsmessages.js' %}"> </script>
 {% endblock  %}

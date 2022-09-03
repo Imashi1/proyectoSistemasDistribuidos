@@ -11,14 +11,17 @@ def register(request):
 
 def registering(request):
     if(request.method == 'POST'):
-        user = User.objects.create_user(request.POST['username'],'',request.POST['password'])
+        User.objects.create_user(request.POST['username'],'',request.POST['password'])
         print('Usuario Registrado')
         return redirect('/')
     
     return redirect('/register')
 
-def log_out(request):
+def log_out(request):    
     user = User.objects.get(username = request.user)
+    request.session['username'] = request.user
+
+    print(request.session['username'])
     logout(request)
-    user.delete()
+    #user.delete()
     return redirect('/')

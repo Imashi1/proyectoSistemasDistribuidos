@@ -1,0 +1,50 @@
+.chat-container{
+    display: grid;
+    flex-flow: column;
+    justify-items: center;
+
+    background-color: rgb(2, 4, 48);
+}
+
+a{
+    background-color: rgb(252, 233, 198);
+    color: rgb(12, 12, 12);
+    padding: 1%;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.chat-header{
+    display: inline;
+    text-align: center;
+}
+
+label{
+    font-size: 2em;
+    color: white;
+}
+
+h1{
+    color: white;
+    font-size: 2.5em;
+}
+
+form > input{
+    width: 20vw;
+    font-size: 1em;
+}
+
+#messages{
+    font-size: 1.5em;
+    color: rgb(26, 26, 26);
+    background-color: rgb(2, 4, 48);
+    width: 80vw;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+p{
+    padding-left: 2%;
+    background-color: white;
+}
