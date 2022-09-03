@@ -1,0 +1,49 @@
+:root{
+    --bg-color: rgb(23, 31, 82);
+}
+
+header{
+    display: flex;    
+    flex-flow: row;
+    justify-content: space-around;
+    height: 100px;
+    width: 100%;
+    padding: 1%;
+    
+
+    background-color: var(--bg-color);
+}
+
+.header-img{
+    padding: 5px;
+
+    height: auto;
+    width: 20%;
+    min-width: 50px;
+
+}
+
+h1{
+    color: white;
+    font-size: 6vmin;
+    width: auto;
+    min-width: 250px;
+    text-align: center;
+
+}
+
+body{
+    margin: 0;
+}
+
+footer{
+    display: flex;    
+    flex-flow: row;
+    justify-content: space-around;
+    height: 100px;
+    width: 100%;
+    padding: 1%;
+    
+
+    background-color: var(--bg-color);  
+}

@@ -1,0 +1,20 @@
+{% extends 'layouts/app_layout.html' %}
+
+{% block content %}
+    <body>
+        <a href="{% url 'logout' %}">DESCONECTAR</a>
+
+        <h2>Lets chat!</h2>
+        
+        <form id="form">
+            <input type="text" name="message"/>
+        </form>
+        
+        <div id="messages"></div>
+        
+
+        
+    </body>
+    
+    <script src="{% static 'js/socketsmessages.js' %}"> </script>
+{% endblock  %}
