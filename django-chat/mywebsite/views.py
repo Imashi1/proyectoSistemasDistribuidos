@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from  django.contrib.auth import logout
+from  django.contrib.auth import logout,login
 
 # Create your views here.
 def index(request):
@@ -12,16 +12,13 @@ def register(request):
 def registering(request):
     if(request.method == 'POST'):
         User.objects.create_user(request.POST['username'],'',request.POST['password'])
-        print('Usuario Registrado')
         return redirect('/')
     
     return redirect('/register')
 
 def log_out(request):    
-    user = User.objects.get(username = request.user)
     request.session['username'] = request.user
 
     print(request.session['username'])
     logout(request)
-    #user.delete()
     return redirect('/')

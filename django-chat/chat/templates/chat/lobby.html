@@ -5,22 +5,34 @@
     
     <div class="chat-container">
         
-        <a href="{% url 'logout' %}">DESCONECTAR</a>
+        <a class="logout-btn" href="{% url 'logout' %}">DESCONECTAR</a>
     
         <div class="chat-header">
             <label for="user">USUARIO:</label>
             <label id="username">{{ user.get_username }}</label>
         </div>
         
-        <form id="form">
-            <input type="text" placeholder="Mensaje" name="message"/>
-        </form>
-        
-        <div id="messages"></div>
+
+            <form id="form">
+                <input id="input_msg" type="text" placeholder="Mensaje" name="message"/>
+                <button type="button" id="emojisbtn">
+                    😀                  
+                </button>
+            </form>
+
+            <div id="emojis-container">
+                <div id="emojis-box">
+                </div>
+            </div>
+
+            <div id="messages"></div>
+
         
 
     </div>
 
     
     <script src="{% static 'js/socketsmessages.js' %}"> </script>
+    <script src="{% static 'js/emojis.js' %}"></script>
+
 {% endblock  %}

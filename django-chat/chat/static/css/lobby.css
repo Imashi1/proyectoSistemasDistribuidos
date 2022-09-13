@@ -1,22 +1,73 @@
 .chat-container{
-    display: grid;
+    display: flex;
     flex-flow: column;
     justify-items: center;
-
+    align-items: center;
     background-color: rgb(2, 4, 48);
+    height: 90vh;
 }
 
-a{
+.logout-btn{
+    margin-top: 2%;
+    display: block;
     background-color: rgb(252, 233, 198);
     color: rgb(12, 12, 12);
     padding: 1%;
     font-size: 1.2em;
     border-radius: 5px;
+    height: 3vh;
+    width: 11vw;
+    align-items: center;
 }
 
 .chat-header{
-    display: inline;
+    margin-top: 1%;
+    display: block;
     text-align: center;
+    height: 6vh;
+}
+
+.chat-body{
+    display: grid;
+    justify-items: center;
+}
+
+#input_msg{
+    font-size: 1.2em;
+}
+
+#emojis-container{
+    position: absolute;
+    justify-items: center;
+    display: none;
+    background-color: rgba(194, 194, 194, 0.274);
+    height: 100vh;
+    width: 100vw;
+}
+
+#emojis-box{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(10,1em);
+    grid-template-rows: repeat(9,1em);
+    gap: 1.2em;
+    background-color: rgb(194, 194, 194);
+
+    min-width: 335px;
+    min-height: 325px;
+    height: 34vh;
+    width: 21vw;
+    border-radius: 5px;
+    padding: 1%;
+    position: absolute;
+   
+}
+
+#emoji{
+    text-align: center;
+    height: 2em;
+    width: 2em;
+    font-size: 1em;
 }
 
 label{
@@ -37,14 +88,23 @@ form > input{
 #messages{
     font-size: 1.5em;
     color: rgb(26, 26, 26);
-    background-color: rgb(2, 4, 48);
+    background-color: rgba(38, 38, 66, 0.479);
     width: 80vw;
+    height: 60vh;
+    overflow-y: auto;
     padding: 1%;
     padding-left: 5%;
     padding-right: 5%;
+    margin: 1%;
+    border-radius: 5px;
 }
 
 p{
-    padding-left: 2%;
+    padding-left: 1%;
+    padding-top: 1%;
     background-color: white;
+    border-radius: 0px 20px 20px 20px;
+    max-width: 80vw;
+    height: 6vh;
+    overflow-x: auto;
 }
