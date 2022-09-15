@@ -2,9 +2,10 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 
 <div class="login-card">
-    <form class="login-form" action="{% url 'registering' %}" method="POST">
+    <!--<form class="login-form" action="{% url 'registering' %}" method="POST">
         {% csrf_token %}
         <div class="form-data">
             <label for="username">Nombre de usuario</label>
@@ -19,6 +20,36 @@
         
         <input type="submit" value="REGISTRAR">
         
+    </form>-->
+
+    <form class="login-form" action="{% url 'registering' %}" method="POST">
+        <!--Ingresa correo-->
+        {% csrf_token %}
+        <label class="color-text-small" for="username">Nombre de usuario</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" id="username" placeholder="Username" required="" name="username">
+            <div class="invalid-feedback" style="width: 100%;">
+            Tu nombre es requerido.
+            </div>
+        </div>
+
+        <!--Ingresa contraseña-->
+
+        <label class="color-text-small" for="username">Contraseña</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+            </div>
+            <input type="password" class="form-control" placeholder="Contraseña" name="password">
+            <div class="invalid-feedback" style="width: 100%;">
+            Ingresa tu contraseña.
+            </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary btn-lg rounded-pill mt-2 " value="REGISTRAR">
     </form>
 </div>
 
