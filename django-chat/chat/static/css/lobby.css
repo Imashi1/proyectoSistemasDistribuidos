@@ -27,6 +27,10 @@
     /* grid-area: desconectar; */
 }
 
+.logout-btn:hover{
+    background-color: rgb(179, 166, 142);
+}
+
 .chat-header{
     margin-top: 1%;
     display: block ruby;
