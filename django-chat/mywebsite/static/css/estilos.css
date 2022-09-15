@@ -1,0 +1,53 @@
+.bg-primary {
+  background-color: #171f52 !important; }
+
+.bg-danger {
+  background-color: #d8872f !important; }
+
+.btn-primary {
+  border-color: #c26721 !important; }
+
+.btn-primary:hover {
+  color: white;
+  background-color: #1F4DA0;
+  border-color: #D8872F; }
+
+.btn-primary {
+  color: white;
+  background-color: #D8872F;
+  border-color: #D8872F; }
+
+.a-navbar {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  font-size: small; }
+
+.a-navbar:hover {
+  color: #E59252; }
+
+.navbar-first {
+  background-color: #232323; }
+
+.color-text-small {
+  color: white; }
+
+.color-boton {
+  background-color: #d8872f !important; }
+
+.color-boton:hover {
+  background-color: #1F4DA0; }
+
+.login-form {
+  background-color: #232323; }
+
+.a-footer {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  font-size: larger; }
+
+.a-footer:hover {
+  color: #E59252; }
+
+/*# sourceMappingURL=estilos.css.map */

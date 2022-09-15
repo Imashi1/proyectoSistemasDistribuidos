@@ -1,10 +1,15 @@
 .chat-container{
-    display: flex;
-    flex-flow: column;
+    /* display: flex; */
+    /* flex-flow: column; */
     justify-items: center;
     align-items: center;
     background-color: rgb(2, 4, 48);
     height: 90vh;
+    display: grid;
+    grid-template-areas:
+    "usuario usuario usuario usuario"
+    "chat chat chat chat"
+    "mensaje mensaje mensaje mensaje";
 }
 
 .logout-btn{
@@ -18,13 +23,20 @@
     height: 3vh;
     width: 11vw;
     align-items: center;
+    margin-left: 20%;
+    /* grid-area: desconectar; */
+}
+
+.logout-btn:hover{
+    background-color: rgb(179, 166, 142);
 }
 
 .chat-header{
     margin-top: 1%;
-    display: block;
+    display: block ruby;
     text-align: center;
     height: 6vh;
+    grid-area: usuario;
 }
 
 .chat-body{
@@ -81,14 +93,16 @@ h1{
 }
 
 form > input{
-    width: 20vw;
+    width: 80vw;
     font-size: 1em;
 }
 
 #messages{
     font-size: 1.5em;
     color: rgb(26, 26, 26);
-    background-color: rgba(38, 38, 66, 0.479);
+    /* background-color: rgba(38, 38, 66, 0.479); */
+    background-image: url(/static/imgs/fondo.png);
+    background-size:contain;
     width: 80vw;
     height: 60vh;
     overflow-y: auto;
@@ -97,6 +111,8 @@ form > input{
     padding-right: 5%;
     margin: 1%;
     border-radius: 5px;
+    grid-area: chat;
+    border: rgb(150, 150, 149) solid 2px;
 }
 
 p{
@@ -105,6 +121,19 @@ p{
     background-color: white;
     border-radius: 0px 20px 20px 20px;
     max-width: 80vw;
-    height: 6vh;
+    height: 12vh;
     overflow-x: auto;
+}
+
+.mensajeria{
+    grid-area: mensaje;
+}
+
+#emojisbtn{
+    width: auto;
+    height: auto;
+}
+
+.lobby{
+    background-color: rgb(2, 4, 48);
 }

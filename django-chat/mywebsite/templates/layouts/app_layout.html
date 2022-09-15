@@ -9,11 +9,63 @@
 </head>
 
 <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> 
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+<script src="{% static 'js/bootstrap.min.js' %}"></script> 
+<script src="https://kit.fontawesome.com/2b7c117909.js" crossorigin="anonymous"></script> 
 
-<header>
-    <img class="header-img" src="{% static 'imgs/utalogo.png' %}" alt="utalogo">
+
+<header class="h-100">
+
+    <ul class="nav justify-content-end navbar-first p-1">
+        <li class="nav-item">
+            <a class="a-navbar nav-link active" href="https://portal.uta.cl/intranet/login" target="__blank">Intranet</a>
+        </li>
+        <li class="nav-item">
+            <a class="a-navbar nav-link " href="http://uta.cl/src/login.php" target="__blank">Correo UTA</a>
+        </li>
+        <li class="nav-item">
+            <a class="a-navbar nav-link " href="https://www.uta.cl/index.php/contactos/" target="__blank">Contacto</a>
+        </li>
+        <li class="nav-item">
+            <a class="a-navbar nav-link" href="https://www.facebook.com/utarapaca" target="__blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="a-navbar nav-link" href="https://twitter.com/utarapaca" target="__blank"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="a-navbar nav-link" href="https://www.instagram.com/utarapaca/" target="__blank"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="a-navbar nav-link" href="https://www.youtube.com/utaplay" target="__blank"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="a-navbar nav-link disabled"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </li>
+    </ul>
+
+    <nav class="nav nav-pills nav-justified bg-primary p-3">
+        <li class="nav-item">
+            <a class="a-navbar nav-link " href="#">
+              <img src="{% static 'imgs/utalogo.png' %}" width="260" height="75" class="" alt="Logo UTA">
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <h1 class="nav-link ">Aplicación de Chat</h1>
+        </li>
+
+        <li class="nav-item">
+            <a class="a-navbar nav-link " href="#">
+              <img src="{% static 'imgs/dicilogo.png' %}" width="300" height="100" class="" alt="Logo DICI">
+            </a>
+        </li>
+    </nav>
+
+    <!--<img class="header-img" src="{% static 'imgs/utalogo.png' %}" alt="utalogo">
     <h1>Aplicación de Chat</h1>
     <img class="header-img" src="{% static 'imgs/dicilogo.png' %}" alt="dicilogo">
+    -->
 </header>
 
 <body>
@@ -23,7 +75,22 @@
     
 </body>
 
-<footer>
-
-
+<footer class="h-50">
+    <div class="nav justify-content-center">
+        <img src="{% static 'imgs/acreditación.png' %}" height="90" width="300" alt="">
+    </div>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="a-footer nav-link active" href="https://www.facebook.com/utarapaca" target="__blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="a-footer nav-link" href="https://twitter.com/utarapaca" target="__blank"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="a-footer nav-link" href="https://www.instagram.com/utarapaca/" target="__blank"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="a-footer nav-link" href="https://www.youtube.com/utaplay" target="__blank"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+    </ul>
 </footer>
