@@ -1,0 +1,90 @@
+//-----------------------------------
+//          PATRON DE COLORES
+//-----------------------------------
+
+$texto: rgb(255, 255, 255);
+$texto2: rgb(23, 21, 21);
+$principal: rgb(23, 31, 82);
+$secundario: rgb(29, 29, 44);
+$terciario: rgb(69, 122, 143);
+$colorBoton: rgb(216, 135, 47);
+
+$--e-global-color-primary: #232323;
+$--e-global-color-secondary: #3C4044;
+$--e-global-color-text: #636363;
+$--e-global-color-accent: #E59252;
+$--e-global-color-68e3392d: #54595F;
+$--e-global-color-4f5bceb6: #D8D8D8;
+$--e-global-color-22ee4aea: #4EBFD8;
+$--e-global-color-74cd5ead: #DD8039;
+$--e-global-color-4ee1b827: #17286B;
+$--e-global-color-2423f002: #EFEFEF;
+$--e-global-color-37362f60: RGBA(14, 27, 77, 0.89);
+$--e-global-color-3d999ee1: #D8872F;
+$--e-global-color-60408a88: #FFCE47;
+$--e-global-color-2f2826d: #1F4DA0;
+
+//----------------------------------------------
+//          ESTILOS SOBRE ESCRITOS DE BOOSTRAP
+//----------------------------------------------
+
+.bg-primary{
+    background-color: $principal !important;
+}
+.bg-danger{
+    background-color: $colorBoton !important;
+}
+.btn-primary {
+	border-color: darken($--e-global-color-74cd5ead,10%) !important;
+}
+.btn-primary:hover{
+    color:$texto;
+    background-color:$--e-global-color-2f2826d;
+    border-color:$--e-global-color-3d999ee1;
+}
+
+.btn-primary{
+    color:$texto;
+    background-color:$--e-global-color-3d999ee1;
+    border-color:$--e-global-color-3d999ee1;
+}
+
+//----------------------------------------------
+//          ESTILOS PERSONALIZADOS
+//----------------------------------------------
+
+.a-navbar {
+    text-decoration: none;
+    background-color:transparent;
+    color: $texto;
+    font-size: small;
+}
+.a-navbar:hover {
+    color: $--e-global-color-accent;
+}
+.navbar-first{
+    background-color: $--e-global-color-primary;
+}
+.color-text-small{
+    color: $texto;
+}
+
+.color-boton{
+    background-color: $colorBoton !important;
+}
+.color-boton:hover {
+    background-color: $--e-global-color-2f2826d;
+}
+.login-form {
+    background-color: $--e-global-color-primary;
+}
+
+.a-footer {
+    text-decoration: none;
+    background-color:transparent;
+    color: $texto;
+    font-size: larger;
+}
+.a-footer:hover {
+    color: $--e-global-color-accent;
+}
