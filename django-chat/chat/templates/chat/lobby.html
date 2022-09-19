@@ -14,7 +14,10 @@
         <div id="messages">
             {%for mensaje in mensajes%}
             <div id="{{mensaje.uuid}}">
-                <p> <span>{{mensaje.author}}</span> <br> {{mensaje.text}} <span class="date"> <a href="{% url 'aEliminar' mensaje.uuid %}" class="btnEliminar">Eliminar</a> {{mensaje.published_date|date:"d/m/Y"}}, {{mensaje.published_date|time:"h:i:s"}}</span></p>
+                <p {% if user.get_username == mensaje.author %}
+                class="mymessage"
+                {% endif %}
+                > <span>{{mensaje.author}}</span> <br> {{mensaje.text}} <span class="date"> <a href="{% url 'aEliminar' mensaje.uuid %}" class="btnEliminar">Eliminar</a> {{mensaje.published_date|date:"d/m/Y"}}, {{mensaje.published_date|time:"h:i:s"}}</span></p>
             </div>
             {%endfor%}
         </div>

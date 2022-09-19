@@ -139,7 +139,18 @@ p{
     background-color: white;
     border-radius: 0px 20px 20px 20px;
     max-width: 80vw;
-    height: 16vh;
+    height: 18vh;
+    overflow-x: auto;
+}
+
+.mymessage{
+    margin-top: 2vh;
+    padding-left: 1%;
+    padding-top: 1%;
+    background-color: rgb(203, 208, 240);
+    border-radius: 20px 0px 20px 20px;
+    max-width: 80vw;
+    height: 18vh;
     overflow-x: auto;
 }
 
@@ -160,7 +171,7 @@ p{
 .btnEliminar{
     text-decoration: none;
     background-color: rgb(199, 199, 199);
-    padding: 5px;
+    padding: 3px;
     border-radius: 5px;
     color: black;
     font-weight: normal;
