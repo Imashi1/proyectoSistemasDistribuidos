@@ -5,34 +5,25 @@ const chatSocket = new WebSocket(url)
 
 chatSocket.onmessage = function(e){
     let data = JSON.parse(e.data)
-    const date = new Date()
+    mensaje = data.message
 
     console.log('Data:', data)
 
     if(data.type === 'chat'){
         let messages = document.getElementById('messages')
 
-        datetime = date.getHours() + ":" 
-        if(date.getMinutes() < 10){
-            datetime += "0" + date.getMinutes()
-        }else{
-            datetime += date.getMinutes()
-        }
-
-        console.log(datetime);
-        messages.insertAdjacentHTML('beforeend', `<div>
-                                <p>${data.message}<br>${datetime}</p>
+        messages.insertAdjacentHTML('beforeend', `<div id="${mensaje.uuid}">
+                                <p> <span>${mensaje.author}</span> <br>${mensaje.text} <span class="date"><a href="aEliminar/${mensaje.uuid}" class="btnEliminar">Eliminar</a> ${mensaje.published_date}</span> </p>
                                 
                             </div>`)
+        messages.scrollTop = messages.scrollHeight
     }
 }
 
 let form = document.getElementById('form')
 form.addEventListener('submit', (e)=> {
     e.preventDefault()
-    let message = user.textContent + ":" + e.target.message.value
-
-
+    let message = user.textContent + ":\t" + e.target.message.value
     
     chatSocket.send(JSON.stringify({
         'message':message,

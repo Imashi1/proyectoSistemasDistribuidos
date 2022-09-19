@@ -23,6 +23,19 @@ header{
 
 }
 
+navbar{
+    display: flex;
+    justify-content: center;
+}
+
+navbar > .nav-item > a{
+    font-size: 2em;    
+}
+
+navbar > li{
+    list-style-type: none;
+}
+
 h1{
     color: white;
     font-size: 6vmin;
