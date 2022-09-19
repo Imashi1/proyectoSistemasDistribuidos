@@ -20,8 +20,7 @@ chatSocket.onmessage = function(e){
         }
         
         messages.insertAdjacentHTML('beforeend', `<div id="${mensaje.uuid}">
-                                <p class=${mymessagecss}> <span>${mensaje.author}</span> <br>${mensaje.text} <span class="date"><a href="aEliminar/${mensaje.uuid}" class="btnEliminar">Eliminar</a> ${mensaje.published_date}</span> </p>
-                                
+                                <p class=${mymessagecss}> <span>${mensaje.author}</span> <br>${mensaje.text} <span class="date"><a href="aEliminar/${mensaje.uuid}" class="btnEliminar">Eliminar</a> ${mensaje.published_date}</span> </p>                                
                             </div>`)
         messages.scrollTop = messages.scrollHeight
     }

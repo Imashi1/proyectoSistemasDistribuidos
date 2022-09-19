@@ -22,6 +22,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('chat.urls')),
+    path('', include('ftpserver.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('register/', views.register , name="register"),
     path('registering/', views.registering , name="registering"),
