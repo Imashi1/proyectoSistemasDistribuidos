@@ -1,0 +1,9 @@
+.ftp-container{
+    /* display: flex; */
+    /* flex-flow: column; */
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(2, 4, 48);
+    height: 90vh;
+    display: grid;
+}

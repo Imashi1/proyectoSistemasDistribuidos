@@ -5,31 +5,43 @@
     <div class="chat-container">
         
         <div class="chat-header">
-            <label for="user"> Bienvenido, Usuari@: </label>
+            <img src="{% static 'imgs/usuario.png' %}" width="40px">
             <label id="username">{{ user.get_username }}</label>
-            <a class="logout-btn" href="{% url 'logout' %}">DESCONECTAR</a>
+            <a class="logout-btn" href="{% url 'logout' %}"><img src="{% static 'imgs/logout.png' %}" width="30px"></a>
         </div>
 
     
-            <div id="messages"></div>
-            <div class="mensajeria">
+        <div id="messages">
+            {%for mensaje in mensajes%}
+            <div id="{{mensaje.uuid}}">
+                <p {% if user.get_username == mensaje.author %}
+                class="mymessage"
+                {% endif %}
+                > <span>{{mensaje.author}}</span> <br> {{mensaje.text}} <span class="date"> <a href="{% url 'aEliminar' mensaje.uuid %}" class="btnEliminar">Eliminar</a> {{mensaje.published_date|date:"d/m/Y"}}, {{mensaje.published_date|time:"h:i:s"}}</span></p>
+            </div>
+            {%endfor%}
+        </div>
+        <form id="form">
+            <input type="text" id="msg" placeholder="Mensaje" name="message" autocomplete="off"></textarea>
+            <div id="emojis-div">
+                <button type="submit" id="btnEnviar"> 
+                    <img src="{% static 'imgs/enviar.png' %}">
+                </button>
 
-                <form id="form">
-                    <input id="input_msg" type="text" placeholder="Mensaje" name="message"/>
-                    <button type="button" id="emojisbtn">
-                        😀                  
-                    </button>
-                </form>
-
+                <button type="button" id="emojisbtn">
+                    <img src="{% static 'imgs/emoji.png' %}">                  
+                </button>
                 <div id="emojis-container">
                     <div id="emojis-box">
+
                     </div>
                 </div>
-
             </div>
+        </form>
 
     </div>
-    
+
+    <script src="{% static 'js/categories.js' %}"></script>
     <script src="{% static 'js/socketsmessages.js' %}"> </script>
     <script src="{% static 'js/emojis.js' %}"></script>
 

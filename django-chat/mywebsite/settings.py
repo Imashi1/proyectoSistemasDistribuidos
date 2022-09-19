@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'chat',
+    'ftpserver'
 ]
 
 ASGI_APPLICATION = 'mywebsite.asgi.application'
@@ -135,6 +136,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'mywebsite/static',
     'chat/static',
+    'ftpserver/static'
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
