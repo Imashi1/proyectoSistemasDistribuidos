@@ -3,5 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.lobby , name='lobby'),
-    path('aEliminar/<uuid>', views.aEliminar, name='aEliminar')
+    path('aEliminar/<uuid>', views.aEliminar, name='aEliminar'),
+    path('aAgregar/', views.aAgregar, name='aAgregar')
+
 ]

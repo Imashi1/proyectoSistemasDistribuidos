@@ -26,13 +26,11 @@ chatSocket.onmessage = function(e){
     }
 }
 
-let form = document.getElementById('form')
-form.addEventListener('submit', (e)=> {
-    e.preventDefault()
+let form = document.getElementById('form1')
+form.addEventListener('submit',(e)=> {
     let message = user.textContent + ":\t" + e.target.message.value
     
     chatSocket.send(JSON.stringify({
         'message':message,
     }))
-    form.reset()
 })
