@@ -3,6 +3,8 @@ from channels.generic.websocket import WebsocketConsumer
 from asgiref.sync import async_to_sync
 from datetime import date
 from django.db import models
+from django.utils import timezone
+
 from .models import Post
 from django.contrib.auth.models import User
 
@@ -32,15 +34,13 @@ class ChatConsumer(WebsocketConsumer):
 
     def chat_message(self, event):
         message = event['message']
-        mensaje = Post.objects.create(text=message.split(':')[1], author = message.split(':')[0])
-        mensaje.publish()
-        
+    
         self.send(text_data=json.dumps({
             'type':'chat',
             'message': {
-                'text': mensaje.text,
-                'uuid': str(mensaje.uuid),
-                'author': mensaje.author,
-                'published_date': mensaje.published_date.strftime("%d/%m/%Y, %I:%M:%S")
+                'text': message.split(':')[1],
+                'uuid': "def",
+                'author': message.split(':')[0],
+                'published_date': (timezone.now()).strftime("%d/%m/%Y, %I:%M:%S")
             }
         }))

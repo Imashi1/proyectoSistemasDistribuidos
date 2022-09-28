@@ -21,8 +21,10 @@
             </div>
             {%endfor%}
         </div>
-        <form id="form">
-            <input type="text" id="msg" placeholder="Mensaje" name="message" autocomplete="off"></textarea>
+        <form id="form1" action="{% url 'aAgregar' %}" method="POST">
+            {% csrf_token %}
+
+            <textarea type="text" id="msg" placeholder="Mensaje" name="message" autocomplete="off"></textarea>
             <div id="emojis-div">
                 <button type="submit" id="btnEnviar"> 
                     <img src="{% static 'imgs/enviar.png' %}">
